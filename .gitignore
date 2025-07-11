@@ -1,0 +1,36 @@
+# Entornos virtuales
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs y bases de datos temporales
+*.log
+*.sqlite3
+
+# Archivos del intérprete
+.python-version
+
+# Archivos de configuración de tests
+.coverage
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Archivos de dependencia
+pip-log
+
+# Variables de entorno
+.env
