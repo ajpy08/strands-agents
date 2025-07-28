@@ -54,12 +54,17 @@ def create_model_from_env():
         )
 
     elif model_type == "bedrock":
-        return BedrockModel(
-            # model_id="anthropic.claude-sonnet-4-20250514-v1:0",
+        model = BedrockModel(
+            model_id="us.anthropic.claude-sonnet-4-20250514-v1:0",
             temperature=0.3,
             top_p=0.8,
             region_name="us-west-2"
         )
+        
+        model_id = model.config['model_id']
+        print(f"[{model_type}] modelo usado: {model_id}")
+        
+        return model
 
     else:
         raise ValueError(
