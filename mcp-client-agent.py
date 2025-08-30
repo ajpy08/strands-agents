@@ -16,7 +16,7 @@ def create_streamable_http_transport():
     return streamablehttp_client("http://localhost:8000/mcp/")
 
 
-def create_model_from_env():
+def create_model():
     """
     Crea el modelo basado en la variable de entorno MODEL_TYPE.
     Opciones: 'openai', 'ollama', 'bedrock' (default)
@@ -80,7 +80,7 @@ with streamable_http_mcp_client:
     tools = streamable_http_mcp_client.list_tools_sync()
 
     # Crear modelo basado en variables de entorno
-    model = create_model_from_env()
+    model = create_model()
 
     # Create an agent with the MCP tools
     agent = Agent(model=model, tools=tools)
